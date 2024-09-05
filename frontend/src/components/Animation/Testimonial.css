@@ -1,0 +1,104 @@
+.testimonial-container {
+  position: relative;
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+  background-image: url("../../img/animation.jpg"); /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* This makes the background scroll with the page */
+  z-index: 1;
+  overflow: hidden; /* Ensure the tint and other elements are contained */
+}
+
+/* Tint Overlay */
+.testimonial-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Tint Color (black with 60% opacity) */
+  z-index: -1; /* Ensures the tint is behind the content */
+}
+
+.testimonial-background {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 2; /* Ensures the testimonial content is above the background and tint */
+}
+
+/* Other styles remain unchanged */
+.testimonial-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: opacity 0.6s ease-in-out;
+  font-family: "Baskervville", serif;
+}
+
+.testimonial-text,
+.testimonial-profile {
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  font-family: "Roboto", sans-serif;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.testimonial-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: rgb(103, 125, 153);
+}
+
+.testimonial-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.testimonial-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.testimonial-controls {
+  margin-top: 20px;
+}
+
+.control-dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.control-dot.active {
+  background-color: white;
+}
+
+.control-dot:hover {
+  background-color: #ddd;
+}
