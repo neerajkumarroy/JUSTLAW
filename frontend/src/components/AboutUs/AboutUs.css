@@ -42,12 +42,43 @@ img {
 }
 
 .banner-overlay p {
-  color: #fff;
+  color: rgb(208, 142, 142);
   margin-bottom: 41px;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 300;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
+}
+
+/*  Banner animation Css */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 710px;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(0, 0%, 80%);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.typewriter-text {
+  position: relative;
+  font-weight: bold;
+  font-family: "Baskervville", serif;
+  letter-spacing: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms infinite;
 }
 
 /* Lawyer Profile Section */

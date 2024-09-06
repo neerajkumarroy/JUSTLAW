@@ -5,7 +5,6 @@ import bannerimg from '../../img/home-banner-1.jpg';
 import img from '../../img/img12.webp';
 
 const AboutUs = () => {
-
     return (
         <div className="about-container">
             {/* Banner Section */}
@@ -13,7 +12,10 @@ const AboutUs = () => {
                 <img src={bannerimg} alt="Law Firm Banner" className="banner-image" />
                 <div className="banner-overlay">
                     <h1>About Us</h1>
-                    <p>Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess<br /> cillum dolore egru lofrre dsu.</p>
+                    <p className="typewriter-text">
+                        Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess<br />
+                        cillum dolore egru lofrre dsu.
+                    </p>
                 </div>
             </div>
 
@@ -52,8 +54,6 @@ const AboutUs = () => {
                 </p>
                 <a href="/learn-more" className="learn-more-btn">Learn More</a>
             </div>
-
-
         </div>
     );
 };

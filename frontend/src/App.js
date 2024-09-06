@@ -8,6 +8,7 @@ import Services from './components/ContactUs/ContactUs.js';
 import AboutUs from './components/AboutUs/AboutUs.js';
 import CaseStudies from './components/Casestuides.js';
 import Blogs from './components/Blogs.js';
+import ErrorPage from './components/ErrorPage/ErrorPage.js';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </main>
       <Footer />
