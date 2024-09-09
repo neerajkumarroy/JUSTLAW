@@ -4,6 +4,8 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const basic_URI = 'https://justlaw-backend.onrender.com';
+
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -26,7 +28,7 @@ const ContactForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:5000/send-email', formData)
+        axios.post(`${basic_URI}/send-email`, formData)
             .then(response => {
                 if (response.status === 200) {
                     toast.success('Form submitted successfully!');
