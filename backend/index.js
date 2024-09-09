@@ -5,7 +5,7 @@ const mailRoutes = require('./Routes/mailRoutes.js');
 const path = require('path');
 
 const app = express(); // Initialize app before using it
-const port = 5000;
+const port = process.env.PORT || 6060;
 
 // Middleware to serve static files from the React app
 app.use(express.static(path.join(__dirname, 'build')));
