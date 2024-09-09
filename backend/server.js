@@ -18,9 +18,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', mailRoutes);
 
 // 404 Error handler
-app.get('/', (req, res) => {
-    res.status(404).sendFile(path.join(__dirname, 'build', 'index.html')); // Set the status code to 404
+process.env.PWD = process.cwd();
+
+app.use(express.static(process.env.PWD + '/build'));
+
+app.get('*', function (req, res) {
+    const index = path.join(process.env.PWD, '/build/index.html');
+    res.sendFile(index);
 });
+
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
