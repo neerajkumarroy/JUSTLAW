@@ -11,7 +11,7 @@ const ContactUs = () => {
         <img src={bannerimg} alt="Law Firm Banner" />
         <div className="banner-overlay">
           <h1>Contact Us</h1>
-          <p>Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess<br /> cillum dolore egru lofrre dsu.</p>
+          <p>Reach out to us for any assistance or inquiries<br /> – we're here to help</p>
         </div>
       </div>
       {/* Why Choose Us? Section */}

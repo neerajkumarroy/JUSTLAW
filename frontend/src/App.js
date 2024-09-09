@@ -6,9 +6,10 @@ import Footer from './components/Footer.js';
 import Home from './components/Home/Home.js';
 import Services from './components/ContactUs/ContactUs.js';
 import AboutUs from './components/AboutUs/AboutUs.js';
-import CaseStudies from './components/Casestuides.js';
-import Blogs from './components/Blogs.js';
+import CaseStudies from './components/Services/Services.js';
+import Blogs from './components/Blogs/Blogs.js';
 import ErrorPage from './components/ErrorPage/ErrorPage.js';
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy.js';
 
 const App = () => {
   return (
@@ -19,8 +20,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/contact-us" element={<Services />} />
           <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/services" element={<CaseStudies />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/privacy-policies" element={<PrivacyPolicy />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </main>

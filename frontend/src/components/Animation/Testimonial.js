@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import './Testimonial.css';
-import Img2 from '../../img/img2.webp';
-import Img3 from '../../img/img3.webp';
-import Img4 from '../../img/img4.jpg';
+import Img2 from '../../img/user1.webp';
+import Img3 from '../../img/user2.webp';
+import Img4 from '../../img/user3.webp';
 
 const testimonials = [
     {
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-        name: "Devid Jonathan",
+        text: "Just Law provided exceptional service during a difficult time. Their team was professional, compassionate, and fought hard to ensure I received the compensation I deserved.",
+        name: "Prdeep Shani",
         img: Img2,
     },
     {
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-        name: "Sarah Williams",
+        text: "I felt confident and supported every step of the way. The attorneys at Just Law were attentive, responsive, and always kept my best interests in mind.",
+        name: "Abhishek Rawat",
         img: Img3,
     },
     {
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-        name: "John Doe",
+        text: "Their dedication and attention to detail were impressive. Just Law guided me through a complex legal process with ease and achieved a successful outcome for my case.",
+        name: "RamanDeep Pawar",
         img: Img4,
     }
 ];

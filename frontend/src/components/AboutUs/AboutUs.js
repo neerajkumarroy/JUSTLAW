@@ -13,8 +13,7 @@ const AboutUs = () => {
                 <div className="banner-overlay">
                     <h1>About Us</h1>
                     <p className="typewriter-text">
-                        Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess<br />
-                        cillum dolore egru lofrre dsu.
+                        Discover who we are and what drives us<br /> to deliver exceptional service and value.
                     </p>
                 </div>
             </div>

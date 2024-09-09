@@ -48,8 +48,9 @@ const Header = () => {
     return (
         <header className="header">
             <div className="logo-container" onClick={goToHome} style={{ cursor: 'pointer' }}>
-                <img src="https://preview.colorlib.com/theme/justlaw/assets/img/logo/logo.png" alt="Logo" className="logo" />
+                <span className="logo-text">JUSTICE<br /> FIRSTLAW</span>
             </div>
+
 
             <div className="contact-icon-container" onClick={toggleContact}>
                 <FontAwesomeIcon icon={faPhone} className="contact-icon" />
@@ -75,7 +76,7 @@ const Header = () => {
                     <li className="nav-item" onClick={() => setIsNavOpen(false)}><a href="/">Home</a></li>
                     <li className="nav-item" onClick={() => setIsNavOpen(false)}><a href="/contact-us">Contact Us</a></li>
                     <li className="nav-item" onClick={() => setIsNavOpen(false)}><a href="/about-us">About Us</a></li>
-                    <li className="nav-item" onClick={() => setIsNavOpen(false)}><a href="/case-studies">Case Studies</a></li>
+                    <li className="nav-item" onClick={() => setIsNavOpen(false)}><a href="/services">Services</a></li>
                     <li className="nav-item" onClick={() => setIsNavOpen(false)}><a href="/blogs">Blogs</a></li>
                 </ul>
             </nav>

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -26,7 +29,7 @@ const ContactForm = () => {
         axios.post('http://localhost:5000/send-email', formData)
             .then(response => {
                 if (response.status === 200) {
-                    setSuccess('Form submitted successfully!');
+                    toast.success('Form submitted successfully!');
                     setError(null);
                     setFormData({
                         name: '',
@@ -41,7 +44,7 @@ const ContactForm = () => {
             })
             .catch(error => {
                 console.error('Error:', error);
-                setError('Failed to send form. Please try again.');
+                toast.warning('Failed to send form. Please try again.');
                 setSuccess(null);
             });
     };
@@ -129,6 +132,7 @@ const ContactForm = () => {
                     </form>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
