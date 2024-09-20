@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 import banner from '../../img/criminal.jpg';
 
-const base_Url = 'http://localhost:7070';
+const base_Url = 'https://justlaw-backend.onrender.com';
 
 const Blogs = () => {
   const [blogsData, setBlogsData] = useState([]);

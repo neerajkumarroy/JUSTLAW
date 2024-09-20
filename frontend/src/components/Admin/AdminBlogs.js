@@ -3,7 +3,8 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import './AdminBlogs.css';
 
-const base_Url = 'http://localhost:7070'; // Update this URL to your backend server
+const base_Url = 'https://justlaw-backend.onrender.com'; // Update this URL to your backend server
+
 
 const AdminBlogs = () => {
     const [blogData, setBlogData] = useState({

@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../Admin/AdminLogin.css';
 
-const base_Url = 'http://localhost:7070';
+const base_Url = 'https://justlaw-backend.onrender.com';
 
 const AdminLogin = () => {
     const [email, setEmail] = useState("");

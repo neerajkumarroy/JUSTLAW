@@ -4,6 +4,9 @@ import "./BlogDetails.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faUser, faFolder } from '@fortawesome/free-solid-svg-icons';
 
+const base_Url = 'https://justlaw-backend.onrender.com';
+
+
 const BlogDetails = () => {
     const { id } = useParams();
     const [blog, setBlog] = useState(null);
@@ -13,7 +16,7 @@ const BlogDetails = () => {
     useEffect(() => {
         const fetchBlogDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:7070/api/v1/blogs/${id}`);
+                const response = await fetch(`${base_Url}/api/v1/blogs/${id}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch blog details');
                 }
