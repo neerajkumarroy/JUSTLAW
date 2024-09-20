@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const basic_URI = 'https://justlaw-backend.onrender.com';
+const base_Url = 'https://justlaw-backend.onrender.com';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`${basic_URI}/send-email`, {
+            const response = await fetch(`${base_Url}/send-email`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
