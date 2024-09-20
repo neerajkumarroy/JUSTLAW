@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for programmatic navigation
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for programmatic navigation
 
 const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isContactOpen, setIsContactOpen] = useState(false);
     const navigate = useNavigate(); // Initialize navigate
+    // login
+    const auth = localStorage.getItem('user');
+    const authObj = JSON.parse(auth);
+    const logout = () => {
+        localStorage.clear();
+        navigate('/admin/login');
+    };
+
 
     // Close the navigation menu when navigating to a new page
     useEffect(() => {
@@ -78,6 +86,11 @@ const Header = () => {
                     <li className="nav-item" onClick={() => setIsNavOpen(false)}><a href="/about-us">About Us</a></li>
                     <li className="nav-item" onClick={() => setIsNavOpen(false)}><a href="/services">Services</a></li>
                     <li className="nav-item" onClick={() => setIsNavOpen(false)}><a href="/blogs">Blogs</a></li>
+                    {auth ? (
+                        <li className="nav-item"><Link onClick={() => { logout(); toggleNav(); }} to="/admin/login">Logout ({authObj.name})</Link></li>
+                    ) : (
+                        <li className="nav-item"><Link to="/admin/login" onClick={toggleNav}>Admin Login</Link></li>
+                    )}
                 </ul>
             </nav>
         </header>

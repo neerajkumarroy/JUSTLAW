@@ -1,5 +1,5 @@
 /* Container styling */
-.privacy-policy-container {
+.cookies-policy-container {
   max-width: 1340px; /* Slightly wider for a more spacious look */
   margin: 0 auto;
   padding: 50px 30px;
@@ -12,7 +12,7 @@
 }
 
 /* Headings */
-.privacy-policy-container h1 {
+.cookies-policy-container h1 {
   font-size: 2.8em;
   margin-bottom: 25px;
   color: #002366; /* Dark blue for primary headings */
@@ -20,7 +20,7 @@
   text-align: center; /* Center the main heading */
 }
 
-.privacy-policy-container h2 {
+.cookies-policy-container h2 {
   font-size: 2em;
   margin-top: 40px;
   margin-bottom: 20px;
@@ -29,7 +29,7 @@
   color: #333;
 }
 
-.privacy-policy-container h3 {
+.cookies-policy-container h3 {
   font-size: 1.7em;
   margin-top: 30px;
   margin-bottom: 15px;
@@ -37,69 +37,102 @@
 }
 
 /* Paragraphs */
-.privacy-policy-container p {
+.cookies-policy-container p {
   margin-bottom: 20px;
   font-size: 1.1em; /* Increase paragraph size for better readability */
   color: #666;
 }
 
 /* Lists */
-.privacy-policy-container ul {
+.cookies-policy-container ul {
   margin-left: 25px;
   margin-bottom: 20px;
   list-style: disc;
 }
 
-.privacy-policy-container ul li {
+.cookies-policy-container ul li {
   margin-bottom: 12px;
   font-size: 1.05em;
   color: #555;
 }
 
 /* Links */
-.privacy-policy-container a {
+.cookies-policy-container a {
   color: #1a73e8; /* Modern blue for links */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease; /* Smooth transition on hover */
 }
 
-.privacy-policy-container a:hover {
+.cookies-policy-container a:hover {
   color: #002366;
   text-decoration: underline;
 }
 
 /* Bold text */
-.privacy-policy-container strong {
+.cookies-policy-container strong {
   font-weight: bold;
   color: #333;
 }
 
 /* Box shadow on hover for links */
-.privacy-policy-container a:hover {
+.cookies-policy-container a:hover {
+  color: orange;
+  text-decoration: none;
+}
+/* Breadcrumb Styles */
+.breadcrumb-container {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+*/ .breadcrumb {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.breadcrumb-item {
+  display: inline;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  margin: 0 5px;
+  color: #6c757d;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb-item a:hover {
   text-decoration: underline;
-  box-shadow: 0 2px 0 0 #002366;
 }
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-  .privacy-policy-container {
+  .cookies-policy-container {
     padding: 20px 15px;
   }
 
-  .privacy-policy-container h1 {
+  .cookies-policy-container h1 {
     font-size: 2.3em;
   }
 
-  .privacy-policy-container h2 {
+  .cookies-policy-container h2 {
     font-size: 1.7em;
   }
 
-  .privacy-policy-container h3 {
+  .cookies-policy-container h3 {
     font-size: 1.4em;
   }
 
-  .privacy-policy-container p {
+  .cookies-policy-container p {
     font-size: 1em;
   }
 }

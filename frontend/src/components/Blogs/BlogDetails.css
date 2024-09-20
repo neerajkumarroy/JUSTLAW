@@ -1,0 +1,122 @@
+.blog-details-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.blog-header-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.blog-title-text {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  line-height: 1.2;
+}
+
+.blog-meta-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.blog-date-info,
+.blog-author-info,
+.blog-category-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f0f3f5;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.blog-detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-content-section {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.blog-content-section ul,
+.blog-content-section ol {
+  margin: 1rem 0;
+}
+
+.blog-content-section li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-content-section a {
+  color: #3498db;
+  text-decoration: none;
+  border-bottom: 1px solid #3498db;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.blog-content-section a:hover {
+  border-bottom-color: transparent;
+}
+
+.blog-content-section blockquote {
+  border-left: 4px solid #3498db;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #34495e;
+}
+
+.loading-message,
+.error-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .blog-details-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .blog-title-text {
+    font-size: 2rem;
+  }
+
+  .blog-meta-info {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blog-details-container {
+  animation: fadeIn 0.5s ease-out;
+}

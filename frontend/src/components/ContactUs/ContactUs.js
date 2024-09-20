@@ -10,7 +10,7 @@ const ContactUs = () => {
       <div className="about-banner">
         <img src={bannerimg} alt="Law Firm Banner" />
         <div className="banner-overlay">
-          <h1>Contact Us</h1>
+          <h1 style={{ color: '#fff' }}>Contact Us</h1>
           <p>Reach out to us for any assistance or inquiries<br /> – we're here to help</p>
         </div>
       </div>

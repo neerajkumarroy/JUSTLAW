@@ -416,6 +416,7 @@ body {
   font-family: "Playfair Display", serif;
   line-height: 1.2;
   margin-left: 138px;
+  text-align: inherit;
 }
 
 .hero-image {
@@ -746,16 +747,21 @@ p {
 }
 
 .stat-item h3 {
-  font-size: 48px;
-  color: #e74c3c;
-  margin-bottom: 5px;
+  color: #da0000;
+  font-size: 40px;
   font-weight: 700;
+  font-family: "Playfair Display", serif;
+  line-height: 1;
+  margin-bottom: 12px;
+  display: block;
 }
 
 .stat-item p {
-  font-size: 18px;
-  color: #2c3e50;
-  margin-bottom: 0;
+  font-size: 16px;
+  color: #64676c;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .image-section {

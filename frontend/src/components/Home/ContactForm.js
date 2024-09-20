@@ -131,6 +131,7 @@ const ContactForm = () => {
                                 {success && <p style={{ color: 'green' }}>{success}</p>}
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>

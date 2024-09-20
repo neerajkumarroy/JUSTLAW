@@ -4,6 +4,14 @@ import '../PrivacyPolicy/Style.css';
 const PrivacyPolicy = () => {
     return (
         <div className="privacy-policy-container">
+            {/* Breadcrumb */}
+            <nav aria-label="breadcrumb" className="breadcrumb-container">
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item"><a href="/">Home</a></li>
+                    <li className="breadcrumb-item active" aria-current="page">Privacy Policy</li>
+                </ol>
+            </nav>
+
             <h1>Privacy Policy</h1>
             <p>Your privacy is important to us. It is <strong>JUSTICE FIRSTLAW</strong>’s policy to respect your privacy regarding any information we may collect from you across our website, <a href="https://justicefirstlaw.com">https://justicefirstlaw.com</a>, and other sites we own and operate.</p>
 
@@ -68,7 +76,7 @@ const PrivacyPolicy = () => {
             </ul>
 
             <h2>7. Cookies</h2>
-            <p>We use cookies to collect information about you and your activity across our site. This helps us serve you content based on preferences you have specified. Please refer to our <a href="/cookie-policy">Cookie Policy</a> for more information.</p>
+            <p>We use cookies to collect information about you and your activity across our site. This helps us serve you content based on preferences you have specified. Please refer to our <a href="/cookie-policies">Cookie Policy</a> for more information.</p>
 
             <h2>8. Business Transfers</h2>
             <p>If our business is sold or merges with another entity, your personal information may be transferred as part of that deal. You acknowledge that such transfers may occur.</p>

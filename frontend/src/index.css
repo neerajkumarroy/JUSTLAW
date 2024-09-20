@@ -12,46 +12,45 @@ code {
     monospace;
 }
 
-/* Cookie Consent Banner Styles */
-.cookieConsent {
-  background-color: #2b373b;
-  color: white;
-  padding: 20px;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  text-align: center;
+.cookieConsentPopup {
+  align-items: baseline;
+  background: rgb(32, 22, 22); /* Dark background color */
+  color: white; /* White text color */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
+  width: 18%; /* Adjust the width as per your requirement */
+  z-index: 999; /* Ensures it stays above other elements */
+  bottom: 0px; /* Positioned at the bottom */
+  left: 0px; /* Positioned at the left corner */
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 365px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-.cookieConsent a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.cookieConsent button {
-  background-color: #4e503b;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 14px;
+.acceptButton {
+  background: rgb(32, 150, 32); /* Green color for the accept button */
+  border: 0px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: none;
+  color: rgb(229, 229, 229); /* Light text color */
   cursor: pointer;
-  margin-left: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  padding: 9px 10px;
+  margin: 20px 10px 20px 0px;
+  flex: 0 0 auto;
 }
 
-.cookieConsent button:hover {
-  background-color: #3e4031;
-}
-
-.cookieConsent .declineButton {
-  background-color: #d9534f;
-}
-
-.cookieConsent .declineButton:hover {
-  background-color: #c9302c;
+.declineButton {
+  background: rgb(234, 18, 18); /* Red color for the decline button */
+  border: 0px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: none;
+  color: rgb(229, 229, 229); /* Light text color */
+  cursor: pointer;
+  padding: 9px 10px;
+  margin: 20px 10px; /* Spacing for the decline button */
+  flex: 0 0 auto;
 }

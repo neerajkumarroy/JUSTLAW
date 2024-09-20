@@ -10,9 +10,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    {/* Overlay for the dark background */}
-    <div className="cookieConsentOverlay"></div>
-
     {/* Cookie Consent Popup */}
     <CookieConsent
       location="bottom"
@@ -25,8 +22,8 @@ root.render(
       buttonClasses="acceptButton"  // Accept button class
       declineButtonClasses="declineButton" // Decline button class
     >
-      This website uses cookies to enhance the user experience.{" "}
-      <a href="/privacy-policy">Learn more</a>
+      We use cookies on our website to provide you with a more personalised digital experience and for analytics related to our website and other media. For more information, please review our Privacy Policy and Cookies Policy. {" "}
+      <a href="/privacy-policies">Learn more</a>
     </CookieConsent>
   </React.StrictMode>
 );

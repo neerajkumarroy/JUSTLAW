@@ -1,0 +1,115 @@
+/* AdminBlogs Page Styles */
+
+.admin-blogs-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #333;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.Add-Blog-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Add-Blog-button:hover {
+  background-color: #218838;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #28a745;
+}
+/* In your AdminBlogs.css file */
+.ql-editor h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ql-editor h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ql-editor h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ql-editor p {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .admin-blogs-container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  textarea,
+  input[type="file"] {
+    font-size: 0.9rem;
+  }
+
+  .Add-Blog-button {
+    font-size: 0.9rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+}
