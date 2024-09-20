@@ -24,7 +24,7 @@ const ContactUs = () => {
           Bring to the table win-win survival strategies to ensure proactive domination. At the end of<br /> the day, going forward,
           a new normal that has evolved from generation X is on the runway workplace diversity and .
         </p>
-        <a href="/learn-more" className="learn-more-btn">Learn More</a>
+        <a href="/" className="learn-more-btn">Learn More</a>
       </div>
       <ContactForm />
       <AnimationWorkFromClient />

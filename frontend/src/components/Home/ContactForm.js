@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -25,30 +23,35 @@ const ContactForm = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        axios.post(`${basic_URI}/send-email`, formData)
-            .then(response => {
-                if (response.status === 200) {
-                    toast.success('Form submitted successfully!');
-                    setError(null);
-                    setFormData({
-                        name: '',
-                        phone: '',
-                        select: '',
-                        email: '',
-                        message: '',
-                    });
-                } else {
-                    throw new Error('Failed to send form.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                toast.warning('Failed to send form. Please try again.');
-                setSuccess(null);
+        try {
+            const response = await fetch(`${basic_URI}/send-email`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
             });
+
+            if (response.ok) {
+                toast.success('Form submitted successfully!');
+                setError(null);
+                setFormData({
+                    name: '',
+                    phone: '',
+                    select: '',
+                    email: '',
+                    message: '',
+                });
+            } else {
+                throw new Error('Failed to send form.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            toast.warning('Failed to send form. Please try again.');
+            setSuccess(null);
+        }
     };
 
     return (
@@ -131,7 +134,6 @@ const ContactForm = () => {
                                 {success && <p style={{ color: 'green' }}>{success}</p>}
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>

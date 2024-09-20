@@ -11,7 +11,7 @@ const AboutUs = () => {
             <div className="about-banner">
                 <img src={bannerimg} alt="Law Firm Banner" className="banner-image" />
                 <div className="banner-overlay">
-                    <h1>About Us</h1>
+                    <h1 style={{ color: '#fff' }}>About Us</h1>
                     <p className="typewriter-text">
                         Discover who we are and what drives us<br /> to deliver exceptional service and value.
                     </p>
@@ -51,7 +51,7 @@ const AboutUs = () => {
                     Bring to the table win-win survival strategies to ensure proactive domination. At the end of<br /> the day, going forward,
                     a new normal that has evolved from generation X is on the runway workplace diversity and empowerment.
                 </p>
-                <a href="/learn-more" className="learn-more-btn">Learn More</a>
+                <a href="/" className="learn-more-btn">Learn More</a>
             </div>
         </div>
     );
