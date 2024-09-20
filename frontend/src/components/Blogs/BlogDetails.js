@@ -63,7 +63,7 @@ const BlogDetails = () => {
                             </span>
                         </div>
                     </div>
-                    <img src={`http://localhost:7070${blog.image}`} alt={blog.title} className="blog-detail-image" />
+                    <img src={`${base_Url}${blog.image}`} alt={blog.title} className="blog-detail-image" />
                     <div className="blog-content-section" dangerouslySetInnerHTML={{ __html: blog.description }}></div>
                 </>
             ) : (
