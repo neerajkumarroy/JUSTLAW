@@ -36,10 +36,10 @@ const Blogs = () => {
     navigate(`/blogs/${id}`);
   };
 
-  // Function to remove HTML tags
-  const stripHtmlTags = (text) => {
-    return text.replace(); //remove
-  };
+  // // Function to remove HTML tags
+  // const stripHtmlTags = (text) => {
+  //   return text.replace(/<\?[^>]+(>|$)/g, "");
+  // };
 
   return (
     <>
@@ -83,7 +83,7 @@ const Blogs = () => {
                   </span>
                 </p>
                 <h3>{blog.title}</h3>
-                <p>{stripHtmlTags(blog.description.slice(0, 150))}...</p> {/* Display a short description */}
+                <p>{(blog.description.slice(0, 150))}...</p> {/* Display a short description */}
                 <button className="read-more-btn" onClick={() => handleReadMore(blog._id)}>
                   Read More
                 </button>
