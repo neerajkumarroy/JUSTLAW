@@ -38,7 +38,7 @@ const Blogs = () => {
 
   // Function to remove HTML tags
   const stripHtmlTags = (text) => {
-    return text.replace();
+    return text.replace(); //remove
   };
 
   return (
