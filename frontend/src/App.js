@@ -15,7 +15,8 @@ import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy.js';
 import CookiePolicy from './components/PrivacyPolicy/CookiePolicy.js';
 import PrivateComponent from './components/Admin/PrivateComponent.js';
 import AdminLogin from './components/Admin/AdminLogin.js';
-import AdminBlogs from './components/Admin/AdminBlogs.js';
+import AdminBlogs from './components/Admin/Blogs/Add_Blogs.js';
+import UpdateBlog from './components/Admin/Blogs/Delete_Update_Blogs.js';
 
 
 const App = () => {
@@ -42,6 +43,14 @@ const App = () => {
             element={
               <PrivateComponent>
                 <AdminBlogs />
+              </PrivateComponent>
+            }
+          />
+          <Route
+            path="/admin/blogs/:id/edit"
+            element={
+              <PrivateComponent>
+                <UpdateBlog />
               </PrivateComponent>
             }
           />

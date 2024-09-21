@@ -12,5 +12,10 @@ router.get('/blogs', BlogController.getBlogs);
 // Route to fetch a single blog by ID
 router.get('/blogs/:id', BlogController.getBlogById);
 
+// Route to update a blog by ID (with image upload support)
+router.put('/blogs/:id', upload.single('image'), BlogController.updateBlog);
+
+// Route to delete a blog by ID
+router.delete('/blogs/:id', BlogController.deleteBlog);
 
 module.exports = router;

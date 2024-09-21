@@ -1,10 +1,9 @@
 import React, { useState, useRef } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import './AdminBlogs.css';
+import './Add_Blogs.css';
 
 const base_Url = 'https://justlaw-backend.onrender.com'; // Update this URL to your backend server
-
 
 const AdminBlogs = () => {
     const [blogData, setBlogData] = useState({
@@ -34,21 +33,32 @@ const AdminBlogs = () => {
         }));
     };
 
-    // Updated modules and formats
+    // Updated modules and formats for the toolbar
     const modules = {
         toolbar: [
+            [{ 'header': [1, 2, 3, false] }], // Heading levels (h1, h2, h3)
+            [{ 'font': [] }], // Font family
             [{ 'size': [] }], // Font size
-            ['bold', 'italic', 'underline'], // Bold, italic, underline
-            [{ 'color': [] }], // Text color
+            ['bold', 'italic', 'underline', 'strike'], // Bold, italic, underline, strikethrough
+            [{ 'color': [] }, { 'background': [] }], // Text color and background color
+            [{ 'script': 'sub' }, { 'script': 'super' }], // Subscript/Superscript
             [{ 'list': 'ordered' }, { 'list': 'bullet' }], // Ordered and bullet lists
-            ['image'], // Image upload
+            [{ 'indent': '-1' }, { 'indent': '+1' }], // Indent/outdent
+            [{ 'align': [] }], // Text alignment
+            ['link', 'image', 'video'], // Link, image, and video upload
+            ['blockquote', 'code-block'], // Blockquote and code block
             ['clean'] // Remove formatting
-        ],
+        ]
     };
 
     const formats = [
-        'size', 'bold', 'italic', 'underline',
-        'color', 'list', 'bullet', 'image'
+        'header', 'font', 'size',
+        'bold', 'italic', 'underline', 'strike',
+        'color', 'background',
+        'script', 'sub', 'super',
+        'list', 'bullet', 'indent', 'align',
+        'link', 'image', 'video',
+        'blockquote', 'code-block'
     ];
 
     const handleSubmit = async (e) => {
@@ -87,8 +97,8 @@ const AdminBlogs = () => {
 
     return (
         <div className="admin-blogs-container">
-            <h1>Add New Blog</h1>
-            <form onSubmit={handleSubmit} encType="multipart/form-data">
+            <h1 className="admin-blogs-title">Add New Blog</h1>
+            <form onSubmit={handleSubmit} encType="multipart/form-data" className="admin-blogs-form">
                 <div className="form-group">
                     <label htmlFor="title">Title:</label>
                     <input
@@ -98,6 +108,7 @@ const AdminBlogs = () => {
                         value={blogData.title}
                         onChange={handleChange}
                         required
+                        className="form-control"
                     />
                 </div>
                 <div className="form-group">
@@ -109,6 +120,7 @@ const AdminBlogs = () => {
                         value={blogData.date}
                         onChange={handleChange}
                         required
+                        className="form-control"
                     />
                 </div>
                 <div className="form-group">
@@ -120,6 +132,7 @@ const AdminBlogs = () => {
                         value={blogData.author}
                         onChange={handleChange}
                         required
+                        className="form-control"
                     />
                 </div>
                 <div className="form-group">
@@ -131,17 +144,19 @@ const AdminBlogs = () => {
                         value={blogData.category}
                         onChange={handleChange}
                         required
+                        className="form-control"
                     />
                 </div>
                 <div className="form-group">
                     <label htmlFor="description">Description:</label>
                     <ReactQuill
-                        ref={quillRef} // Assign the ref here
+                        ref={quillRef}
                         theme="snow"
                         value={blogData.description}
                         onChange={handleDescriptionChange}
                         modules={modules}
                         formats={formats}
+                        className="quill-editor"
                     />
                 </div>
                 <div className="form-group">
@@ -151,9 +166,10 @@ const AdminBlogs = () => {
                         id="image"
                         name="image"
                         onChange={handleChange}
+                        className="form-control"
                     />
                 </div>
-                <button className='Add-Blog-button' type="submit">Add Blog</button>
+                <button className="btn btn-primary" type="submit">Add Blog</button>
                 {message && <p className="message">{message}</p>}
             </form>
         </div>
